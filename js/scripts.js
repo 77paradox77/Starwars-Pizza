@@ -1,5 +1,5 @@
 // BUSINESS LOGIC
-function pizzaOrder(name, sauces, veggies, meat, size) {
+function pizzaOrder(name, sauces, veggies, meat, size, price) {
   this.name = name;
   this.sauces = sauces;
   this.veggies = veggies;
@@ -8,17 +8,19 @@ function pizzaOrder(name, sauces, veggies, meat, size) {
   this.price = "";
 }
 
-var price = pizzaOrder.prototype.spacePrice = function() {
-  if (this.orderSize === "small") {
-    this.price = "250";
-  } else if (this.orderSize === "medium") {
-    this.price = "500";
-  } else if (this.orderSize === "large") {
-    price = "1000";
+var price = pizzaOrder.prototype.sizePrice = function() {
+  if (this.size === $("#1")) {
+    price = 10;
+  } else if (this.size === $("#2")) {
+    price = 15;
+  } else if (this.size === $("#3")) {
+    price = 20;
   } else {
-    alert("please select a size!");
-    }
+    price = 25;
   }
+}
+
+
 
 // USER INTERFACE
 $(document).ready(function() {
@@ -43,7 +45,7 @@ $(document).ready(function() {
       $(".customer4").text(newOrder.meat);
       $(".customer5").text(newOrder.size);
 
-      $(".pricing").append(price);
+      $(".pricing").text(price);
   })
 });
 });
