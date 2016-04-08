@@ -1,0 +1,21 @@
+h1 {
+  text-align: center;
+  font-size: 80px;
+}
+
+.intro {
+  text-align: center;
+}
+
+#show-order {
+  display: none;
+}
+
+#orders {
+  cursor: pointer;
+  color: #0088cc;
+}
+
+#orders:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Pizzaria</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css" charset="utf-8">
+    <script src="js/jquery-1.12.3.js" type="text/javascript"></script>
+    <script src="js/scripts.js" type="text/javascript"></script>
+
+
+  </head>
+  <body>
+    <h1>Starwars Pizza</h1>
+
+    <div class="intro">
+      <p><strong>Poached from the farthest reachings of the galaxy, we bring you authentic pizza from "the Galaxy Far Far away". We have everykind of option to fullfill your diet, no matter what your race or species is. Enjoy!</strong></p>
+    </div>
+
+      <div class="container">
+        <form id="pizzas">
+          <div class="row">
+            <!-- NAME INPUT FROM USER -->
+            <h2>What's your Name?</h2>
+            <div class="form-group">
+              <input type=text name="orderName" id="orderName" placeholder="Alliance">
+              <!-- SELECT YOUR GALACTIC ALLIANCE -->
+              <label for="rebel">Rebel Orders</label>
+              <input id="rebel" type="radio" name="side">
+              <label for="empire">Empire Orders</label>
+              <input id="empire" type="radio" name="side">
+              <label for="mercenary">Mercenary</label>
+              <input id="mercenary" type="radio" name="side">
+              <label for="jedi">Jedi</label>
+              <input id="jedi" type="radio" name="side">
+            </div>
+          </div>
+
+          <!-- ORDER INSTRUCTIONS -->
+          <div id="info" class="row">
+            <h2>Pick your toppings!</h3>
+            <p>order insturctions will go here</p>
+
+            <!-- CHOOSE YOUR TOPPINGS -->
+            <div id="topping1" class="form-group col-sm-3">
+              <h3>Sauces:</h3>
+              <select id="sauces">
+                <option name="toppings" class="toppings" value=""></option>
+                <option name="toppings" class="toppings" value="Sarlack pit Sprinkles"> Sarlack Pit sprinkles</option><br>
+                <option name="toppings" class="toppings" value="Princess Padme Tears"> Princess Padme Tears</option><br>
+                <option name="toppings" class="toppings" value="Jaba Spit"> Jaba spit</option><br>
+            </select>
+            </div>
+
+            <!-- CHOOSE YOUR VEGGIES -->
+            <div id="toppings2" class="col-sm-3">
+              <h3>Veggies:</h3>
+              <select id="veggies">
+                <option name="toppings" class="toppings" value=""></option>
+                <option name="toppings" class="toppings" value="sunDrieds"> Sun Dried Tomatoes</option>
+                <option name="toppings" class="toppings" value="artichoke"> Artichoke Hearts</option>
+                <option name="toppings" class="toppings" value="jalapenos"> Jalapenos</option>
+                <option name="toppings" class="toppings" value="mushrooms"> Mushrooms</option>
+                <option name="toppings" class="toppings" value="onion"> Carmelized Onion</option>
+                <option name="toppings" class="toppings" value="olives"> Olives</option>
+                <option name="toppings" class="toppings" value="garlic"> Roasted Garlic</option>
+              </select>
+            </div>
+
+            <!-- CHOOSE YOUR MEAT -->
+            <div id="toppings3" class="form-group col-sm-3">
+              <h3>Meat:</h3>
+              <select id="meat">
+                <option  name="toppings" class="toppings" value=""></option>
+                <option  name="toppings" class="toppings" value="anakin">Anakin Meat</option>
+                <option  name="toppings" class="toppings" value="ewok">Ewok</option>
+                <option  name="toppings" class="toppings" value="wooki">Wooki</option>
+                <option  name="toppings" class="toppings" value="rodane">Rodane</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- CHOOSE THE SIZE OF YOUR PIZZA! -->
+          <div class="row">
+            <h2>What size pizza would you like?</h2>
+            <form id="size" class="form-group">
+              <input type="radio" class="size" name="radioButton" value="small"> Small (12")<br />
+              <input type="radio" class="size" name="radioButton" value="medium"> Medium (14")<br />
+              <input type="radio" class="size" name="radioButton" value="large"> That's no moon..(18")<br />
+            </form>
+
+            <button type="submit" class="btn btn-success">May the Force be with you</button>
+        </form>
+
+            <h2>Galactic Empire:</h2>
+          <ul id="orders">
+          </ul>
+
+
+              <div class="col-md-6">
+                <div id="show-order">
+                  <h2></h2>
+
+                  <p>Name: <span class="customer"></span></p>
+                  <p>Sauces: <span class="customer"></span></p>
+                  <p>Veggies: <span class="customer"></span></p>
+                  <p>Meat: <span class="customer"></span></p>
+                  <p>Size: <span class="customer"></span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.js"></script>
+  </body>
+</html>
