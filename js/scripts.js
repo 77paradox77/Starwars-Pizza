@@ -8,15 +8,16 @@ function pizzaOrder(name, sauces, veggies, meat, size, price) {
   this.price = "";
 }
 
-var price = pizzaOrder.prototype.sizePrice = function() {
-  if (this.size === $("#1")) {
-    price = 10;
-  } else if (this.size === $("#2")) {
-    price = 15;
-  } else if (this.size === $("#3")) {
-    price = 20;
+var price = "$400"
+ pizzaOrder.prototype.sizePrice = function() {
+  if (this.size === "small") {
+    price = "10";
+  } else if (this.size === "medium") {
+    price = "15";
+  } else if (this.size ===  "large") {
+    price = "20";
   } else {
-    price = 25;
+    price = "25";
   }
 }
 
@@ -30,7 +31,7 @@ $(document).ready(function() {
     var orderVeggies = $("#veggies").val();
     var orderMeat = $("#meat").val();
     var orderSize = $('input[name="radioButton"]:checked').val();
-    var newOrder = new pizzaOrder (orderSauce, orderVeggies, orderMeat, orderSize);
+    var newOrder = new pizzaOrder (orderSauce, orderVeggies, orderMeat, orderSize, price);
     event.preventDefault();
 
     $("ul#orders").append("<li><span class='pizza'>" + name + newOrder.pizzaOrder + "</span></li>");

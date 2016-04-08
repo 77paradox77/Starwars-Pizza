@@ -1,6 +1,18 @@
+
+
+#info {
+  margin:auto;
+}
+
+.container {
+  text-align: center;
+}
+
+
 h1 {
   text-align: center;
   font-size: 80px;
+  font-family: 'Diplomata SC';
 }
 
 .intro {
@@ -14,8 +26,12 @@ h1 {
 #orders {
   cursor: pointer;
   color: #0088cc;
+  list-style-type: none;
+  text-align: center;
+  margin:auto;
 }
 
 #orders:hover {
   text-decoration: underline;
+
 }
