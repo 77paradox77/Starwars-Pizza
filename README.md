@@ -13,7 +13,7 @@ This site uses Object Oriented javascript to display one or more pizza orders. U
 * To view project:
 * git clone the link in the link in the repository.
 * or to view in webpage you can copy and paste
-* this link in your address bar in your chrome browser:
+* this link in your address bar in your chrome browser: http://77paradox77.github.io/Starwars-Pizza/
 
 
 ## Known Bugs
