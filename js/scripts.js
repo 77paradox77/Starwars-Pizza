@@ -1,15 +1,17 @@
 // BUSINESS LOGIC
-function pizzaOrder(name, sauces, veggies, meat, size, price) {
+function pizzaOrder(name, sauces, veggies, meat, size) {
   this.name = name;
   this.sauces = sauces;
   this.veggies = veggies;
   this.meat = meat;
   this.size = size;
-  this.price = "";
+
 }
 
-var price = "$400"
+// var price = "$400"
  pizzaOrder.prototype.sizePrice = function() {
+   var price;
+   console.log(this.size);
   if (this.size === "small") {
     price = "10";
   } else if (this.size === "medium") {
@@ -19,6 +21,7 @@ var price = "$400"
   } else {
     price = "25";
   }
+  return price;
 }
 
 
@@ -31,10 +34,10 @@ $(document).ready(function() {
     var orderVeggies = $("#veggies").val();
     var orderMeat = $("#meat").val();
     var orderSize = $('input[name="radioButton"]:checked').val();
-    var newOrder = new pizzaOrder (orderSauce, orderVeggies, orderMeat, orderSize, price);
+    var newOrder = new pizzaOrder (name, orderSauce, orderVeggies, orderMeat, orderSize);
     event.preventDefault();
 
-    $("ul#orders").append("<li><span class='pizza'>" + name + newOrder.pizzaOrder + "</span></li>");
+    $("ul#orders").append("<li><span class='pizza'>" + name + "</span></li>");
 
     $(".pizza").last().click(function() {
       console.log("mekin moonay");
@@ -46,7 +49,7 @@ $(document).ready(function() {
       $(".customer4").text(newOrder.meat);
       $(".customer5").text(newOrder.size);
 
-      $(".pricing").text(price);
+      $(".pricing").text(newOrder.sizePrice());
   })
 });
 });
